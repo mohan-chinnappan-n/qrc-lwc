@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="qrc">
+    <apiVersion>45.0</apiVersion>
+
+    <!--
+    To make your component usable in Community Builder, set isExposed to true
+    -->
+
+     <isExposed>true</isExposed>
+
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+
+        <!--
+         define  lightningCommunity__Page in targets
+         ref: https://developer.salesforce.com/docs/component-library/documentation/lwc/lwc.use_config_for_community_builder
+        -->
+
+        <target>lightningCommunity__Page</target>
+
+        <!--
+        To include properties that are editable when the component is selected in Community Builder, 
+        define  lightningCommunity__Default in targets and define the properties in targetConfigs.
+        -->
+        <target>lightningCommunity__Default</target>
+
+
+    </targets>
+
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+                 <property name="recordId" type="String" default="001f400000M8bifAAB"></property>
+                 <property name="percentage" type="Integer" default="30"></property>
+        </targetConfig>
+    </targetConfigs>
+
+</LightningComponentBundle>
