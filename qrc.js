@@ -1,7 +1,6 @@
 import { LightningElement, api, wire } from 'lwc';
 import qrcode from './qrcode.js';
 
-// refer: https://gitlab.com/rendaw/qrcode-generator-es6/blob/master/readme.md
 
 export default class Qrc extends LightningElement {
     @api recordId;
